@@ -1,0 +1,27 @@
+.footer {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    padding: 48px 16px;
+  }
+  &__logo {
+    width: 35%;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  &__social-media {
+    display: flex;
+    gap: 20px;
+  }
+  &__dark {
+    background-color: $black;
+    color: $white;
+  }
+    &__brown {
+    background-color: $brown;
+    color: $black;
+  }
+}

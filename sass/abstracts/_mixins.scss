@@ -23,3 +23,45 @@
     }
   }
 }
+
+@mixin reset-list() {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin button() {
+  display: inline-flex;
+  text-decoration: none;
+  color: $white;
+
+  .button__label,
+  .button__icon {
+    transition: background-color 0.3s ease;
+  }
+
+  .button__label {
+    background-color: $black;
+    font-family: $big-shoulders-font;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 3.64px;
+    padding: 24px 35px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .button__icon {
+    background-color: $brown;
+    padding: 24px;
+    display: inline-flex;
+  }
+
+  &:hover .button__label {
+    background-color: $brown;
+  }
+
+  &:hover .button__icon {
+    background-color: $black;
+  }
+}

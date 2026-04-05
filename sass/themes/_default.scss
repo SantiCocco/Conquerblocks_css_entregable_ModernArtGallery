@@ -1,7 +1,12 @@
 html * {
-    font-family: $roboto-font;
+    font-family: $outfit-font;
 }
- 
+
 body {
     overflow-x: hidden;
+    font-size: 18px;
 } 
+
+img {
+    max-width: 100%;
+}
