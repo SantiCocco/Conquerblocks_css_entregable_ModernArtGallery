@@ -1,7 +1,7 @@
 {
-  "name": "spabeauty_entregable",
-  "version": "0.0.0",
+  "name": "base-vite-project-sass",
   "private": true,
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,7 +9,9 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "sass": "^1.98.0",
-    "vite": "^8.0.0"
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "sass": "^1.69.5"
   }
 }
