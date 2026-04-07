@@ -1,10 +1,9 @@
-html * {
-    font-family: $outfit-font;
-}
+@use '../abstracts/abstracts' as *;
 
 body {
     overflow-x: hidden;
     font-size: 18px;
+    font-family: $outfit-font;
 } 
 
 img {
