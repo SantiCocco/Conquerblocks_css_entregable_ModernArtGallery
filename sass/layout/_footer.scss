@@ -1,11 +1,16 @@
 @use '../abstracts/abstracts' as *;
 
 .footer {
+  @include breakpoint(desktop) {
+    display: flex;
+    justify-content: center;
+  }
   &__content {
     display: flex;
     flex-direction: column;
     gap: 38px;
     padding: 48px 16px;
+    max-width: $max-width;
     @include breakpoint(tablet) {
       display: flex;
       flex-direction: row;

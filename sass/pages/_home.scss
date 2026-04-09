@@ -1,23 +1,27 @@
 @use '../abstracts/abstracts' as *;
 
-.hero {
+main {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  section {
+    width: 100%;
+  }
+}
+
+.hero {
+  background-image: url('../img/mobile_hero.jpg');
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: top;
+  max-width: $max-width;
 
   &__content {
-    display: flex;
-    flex-direction: column;
     padding-left: 16px;
     padding-right: 16px;
   }
-
-  &__image-wrapper {
-    width: 100%;
-    .hero__image { width: 100%; display: block; }
-  }
-
   &__title {
-    margin-top: 32px;
+    padding-top: 300px;
     padding-left: 16px;
     padding-right: 16px;
     font-family: $big-shoulders-font;
@@ -37,108 +41,55 @@
 
   //Responsive styles for tablet hero
   @include breakpoint(tablet) {
-    display: grid;
-    grid-template-columns: repeat(20, 1fr);
-    grid-template-rows: auto auto;
+    background-image: url('../img/tablet_hero.jpg');
+    background-position: left;
+    min-height: 700px;
+    display: flex;
+    justify-content: end;
     align-items: center;
-    row-gap: 48px;
+
+    &__box {
+      margin-right: 40px;
+    }
 
     &__content {
-      grid-column: 11 / 20;
-      grid-row: 2;
-      display: grid;
-      gap: 48px;
-      align-content: start;
+      max-width: 340px;
       padding: 0;
-    }
-
-    &__title, &__subtitle, .button {
-      padding: 0;
-      margin: 0;
-    }
-
-    &__image-wrapper {
-      grid-column: 1 / 12;
-      grid-row: 1 / 3;
     }
 
     &__title {
-      grid-column: 11 / 20;
-      grid-row: 1;
+      padding: 0;
       font-size: 70px;
       line-height: 65px;
-    }
-
-    .button {
-      justify-self: start;
     }
   }
 
   //Responsive styles for desktop hero
   @include breakpoint(desktop) {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    align-items: stretch;
-    row-gap: 0;
-    min-height: 700px;
-    margin-bottom: 180px;
-    &::before {
-      content: "";
-      grid-column: 1;
-      grid-row: 1;
-      background-color: $black;
-      align-self: stretch;
-    }
-    &::after {
-      content: "";
-      grid-column: 3;
-      grid-row: 1;
-      background-color: $white;
-      align-self: stretch;
-    }
-    &__image-wrapper {
-      grid-column: 2;
-      grid-row: 1;
-      height: 100%;
-      .hero__image {
-        height: 100%;
-        object-fit: cover;
-      }
+    background-image: 
+      url('../img/desktop_hero.jpg'),
+      linear-gradient(to right, $black 50%, $white 50%);
+    background-position: center;
+    min-height: 800px;
+    &__box {
+      width: 90%;
+      margin: 0;
+      display: flex;
+      justify-content:start;
+      gap: 363px;
     }
     &__content {
-      grid-column: 2 / 4;
-      grid-row: 1;
-      z-index: 3;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto;
-      align-content: center;
-      row-gap: 32px;
-      width: 350px;
-      padding: 0;
-      justify-self: center;
-      transform: translateX(100px);
+      align-self: self-end;
     }
     &__title {
-      grid-column: 1 / 3;
-      grid-row: 1;
-      align-self: center;
       color: $white;
-      margin: 0;
-      margin-bottom: 100px;
-      justify-self: center;
-      z-index: 3;
-      transform: translateX(-50px);
+      font-size: 70px;
+      line-height: 70px;
     }
     &__subtitle {
-      max-width: 100%;
-      justify-self: start;
-      margin: 0;
-      padding: 30px;
-    }
-    .button {
-      justify-self: start;
-      margin: 0;
+      font-size: 20px;
+      margin-top: 0px;
+      margin-bottom: 64px;
     }
   }
 }
@@ -148,6 +99,7 @@
 .gallery {
   margin-top: 120px;
   margin-bottom: 120px;
+  max-width: $max-width;
 
   &__picture-container {
     width: 100%;
@@ -251,6 +203,7 @@
   }
   //Responsive styles for desktop gallery
   @include breakpoint(desktop) {
+    margin-top: 180px;
     .container {
       padding-left: 120px;
       padding-right: 120px;

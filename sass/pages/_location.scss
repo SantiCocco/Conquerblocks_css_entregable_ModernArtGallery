@@ -1,57 +1,71 @@
 @use '../abstracts/abstracts' as *;
 
-.location-hero__content {
-  position: relative;
-    .button {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      @include breakpoint(tablet) {
-      left: 35px;
-      }
-      @include breakpoint(desktop) {
-      left: 156px;
-      }
-    }
-}
+.page-location {
 
-.location-description {
-  padding: 48px 16px 56px 16px;
-  background-color: $black;
-  @include breakpoint(tablet) {
-    padding: 88px 40px 80px 40px;
-    display: flex;
-    gap: 68px;
-  }
-  @include breakpoint(desktop) {
-    padding: 104px 165px 128px 165px;
-    gap: 220px;
-  }
-  &__title {
-    h1 {
-      font-family: $big-shoulders-font;
-      color: $white;
-      font-weight: 900;
-      font-size: 50px;
-      line-height: 45px;
-      margin-bottom: 48px;
+  main {
+    background-color: $black;
+    .location-container {
+      max-width: $max-width;
     }
   }
-  &__content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    h2 {
-      font-family: $big-shoulders-font;
-      font-size: 32px;
-      font-weight: 900;
-      line-height: 32px;
-      color: $brown;
+
+  .location-hero__content {
+    position: relative;
+      .button {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        @include breakpoint(tablet) {
+        left: 35px;
+        }
+        @include breakpoint(desktop) {
+        left: 156px;
+        }
+      }
+  }
+
+  .hero__map {
+    display: block;
+  }
+
+  .location-description {
+    padding: 48px 16px 56px 16px;
+    background-color: $black;
+    @include breakpoint(tablet) {
+      padding: 88px 40px 80px 40px;
+      display: flex;
+      gap: 68px;
     }
-    p {
-      font-size: 18px;
-      line-height: 28px;
-      color: $white;
+    @include breakpoint(desktop) {
+      padding: 104px 165px 128px 165px;
+      gap: 220px;
+    }
+    &__title {
+      h1 {
+        font-family: $big-shoulders-font;
+        color: $white;
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 45px;
+        margin-bottom: 48px;
+      }
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h2 {
+        font-family: $big-shoulders-font;
+        font-size: 32px;
+        font-weight: 900;
+        line-height: 32px;
+        color: $brown;
+      }
+      p {
+        font-size: 18px;
+        line-height: 28px;
+        color: $white;
+      }
     }
   }
 }
